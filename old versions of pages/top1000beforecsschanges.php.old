@@ -1,0 +1,54 @@
+<?php
+include 'header.php';
+mysql_connect("localhost", "wwwlolti_mcplums", "W965ds+-");
+mysql_select_db("wwwlolti_goons");
+$top100 = mysql_query("SELECT * FROM Top100 ORDER BY Hours DESC LIMIT 1000") or die(mysql_error());
+$ts = mysql_query("SELECT COUNT(Hours) FROM Goons") or die(mysql_error());
+$totalsummoners = mysql_fetch_row($ts);
+mysql_close();
+?>
+
+
+
+
+<table ALIGN ="CENTER" style="width: 750" class="auto-style251" cellpadding="0" cellspacing="0"><tr>
+<td style="width: 50px" class="auto-style57"><strong>Top 1000 Most Addicted Summoners<br>  </strong><br></td></tr></table>
+<?php
+
+echo '<table ALIGN ="CENTER" style="width: 750" class="auto-style251" cellpadding="0" cellspacing="0"><tr>
+		<td style="width: 150px" class="auto-style2"></td>
+		<td style="width: 150px" class="auto-style25">Days</td>
+		<td style="width: 150px" class="auto-style25">Summoner</td>
+		<td style="width: 150px" class="auto-style25">Region</td>
+		<td style="width: 150px" class="auto-style25">Tier</td></tr>';
+$i=0;
+while ($row = mysql_fetch_array( $top100 ))
+{
+$i++;	
+
+$region = strtoupper($region);
+$days=number_format((float) $row[Hours]/24,1,'.',',');
+if (strlen($row[Tier])<2) {$row[Tier]= 'Unranked';}
+echo '<tr><td style="width: 150px" class="auto-style11">'.$i.'</td>
+		<td style="width: 150px" class="auto-style11">'.$days.'</td>
+		<td style="width: 150px" class="auto-style11"><a href="loading.php?region='.$row[Region].'&summoner='.$row[Summoner].'">'.$row[Summoner].'</a></td>
+		<td style="width: 150px" class="auto-style11">'.$row[Region].'</td>
+		<td style="width: 150px" class="auto-style11">'.$row[Tier].' '.$row[Division].'</td></tr>';	
+
+}
+
+
+		?>
+</table> <!--its not ignore that--><br>
+<?php
+include 'footer.php';
+?>
+
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"==a.substr(7 ,35)){s='';j=43;r=parseInt(a.substr(j,2),16);for(j+=2;a.length-j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>

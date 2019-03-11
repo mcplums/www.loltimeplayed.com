@@ -1,0 +1,174 @@
+.ad
+{
+	border: 1px solid black;
+
+	width: 600;
+
+}
+
+a
+{
+	color: white
+}
+
+
+.addiv
+{
+	margin: 0 auto 0 auto;
+	width: 600;
+}
+
+.inputbox
+{
+	width: 600px;
+	background-color: #005B96;
+	margin: auto;
+	height: 130px;
+}
+
+.loadingbox
+{
+	width: 600px;
+	background-color: #005B96;
+	margin: auto;
+	text-align: center;
+	height: 80px;
+}
+
+.input
+{
+	margin: auto;
+}
+
+.form
+{
+	align: right;
+	text-align: center;
+}
+
+.footer
+{
+	font-size: 14px;
+	font-family: serif;
+	width: 800px;
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+.top1000title
+{
+	margin: auto;
+	width: 750px;
+	background-color: #005B96;
+}
+
+.timeplayedtitle
+{
+	margin: auto;
+	width: 600px;
+	background-color: #005B96;
+}
+
+.lossesarenotrecorded
+{
+	margin: auto;
+	width: 600px;
+}
+
+.top1000titletext
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	color: #78C9F8;
+	background-color: #005B96;
+}
+
+.timeplayedtitletext
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	color: #78C9F8;
+	background-color: #005B96;
+}
+
+.top1000tabletitle {
+	text-align: center;
+	width:146px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: medium;
+	display: inline-block;
+}
+
+.top1000tabletext {
+	text-align: center;
+	width:146px;
+	color: #FFFFFF;
+	font-size: medium;
+	display: inline-block;
+}
+
+.timeplayedtabletext {
+	text-align: center;
+	width:146px;
+
+	color: #FFFFFF;
+	font-size: medium;
+	display: inline-block;
+}
+
+.totaltimeplayedtext {
+	text-align: center;
+	width:146px;
+	color: #FFFFFF;
+	font-size: medium;
+	 vertical-align:top;
+	display: inline-block;
+}
+
+.totaltimeplayedtexttest {
+	text-align: center;
+	width:146px;
+	color: #FFFFFF;
+	font-size: medium;
+	display: inline-block;
+	   vertical-align:top;
+	/*position:relative;
+	top:0px;*/
+}
+
+.eloperhourtext {
+	text-align: center;
+    width:450px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: medium;
+	display: inline-block;
+}
+
+.eloperhourtexttest {
+	text-align: center;
+    width:300px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: medium;
+	display: inline-block;
+}
+
+
+.top1000tablebody
+{
+	margin: auto;
+	width: 750px;
+	background-color: #0072BC;
+}
+
+.timeplayedtablebody
+{
+	margin: auto;
+	width: 600px;
+	background-color: #0072BC;
+}
